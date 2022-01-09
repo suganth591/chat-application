@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>chatbot</title>
+        <link rel="stylesheet" href="style/style.css">
+    </head>
+    <body>
+        <style>
+            .form{
+    border:2px solid red;
+    padding:2%;
+    padding-top:1%;
+    padding-bottom:3%;
+    width:50%;
+    margin:auto;
+    margin-top:10%;
+    font-size:150%;
+    background-image: linear-gradient(to right top, #ffbbe2, #f3beed, #e5c1f5, #d6c5fb, #c6c9ff, #b8d0ff, #acd6ff, #a4dbff, #a0e5ff, #a0eeff, #a5f7fe, #aefffa);
+    font-weight: bolder;
+    border-radius:50px;
+}
+input[type=text],input[type=number],input[type=email],input[type=date],#gender{
+    width:60%;
+    height:4%;
+    background:rgb(255, 255, 255);
+    font-size:100%;
+    color:black;
+    border-radius:50px;
+}
+input[type=password]{
+    height:4%;
+    width:59%;
+    background:rgb(255, 255, 255);
+    color:black;
+    border-radius:50px;
+}
+
+input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{
+    -webkit-appearance:none;
+    margin:0;
+}
+#form-head{
+    text-align:center;
+    color:rgb(255, 124, 124);
+    text-shadow: white 5px 5px 20px;
+}
+#reg{
+    margin-left:40%;
+    width:auto;
+    color:black;
+    height:5%;
+    background-color: aqua;
+    border-radius:10px;
+    font-size:130%;
+    font-weight: bold;
+}
+#mouse{
+    text-decoration:none;
+    color:black;
+}
+</style>
+        <form action="/chat/php/register.php" method="POST" class='form ' >
+            <h2 id="form-head">Registeration form-User</h2>
+            Username:&ensp;<input type="text" name="name" required minlength="6" maxlength="20" style="font-size:100%"><br><br>
+            Gender:&ensp;&ensp; <select id="gender" name="gender" required style="font-size:100%;border:2px black solid;">
+                <option hidden value >select</option>
+                <option value="m" name="gender">male</option>
+                <option value="f" name="gender">female</option>
+                </select>
+            <br><br>DOB:&ensp;&ensp;&ensp;&ensp;&ensp;<input type="date" name="DOB" required style="font-size:100%">
+            <br><br>Email:&ensp;&ensp;&ensp;&ensp;<input type="email" name="email" maxlength="50" required style="font-size:100%">
+            <br><br>Phone:&ensp;&ensp;&ensp;&ensp;<input type=number name="phone" required style="font-size:100%">
+            <br><br>password:&ensp;&ensp;<input type="password" name="password" required minlength="7" maxlength="40" style="font-size:100%">
+            <br><br><input type="submit" name='send' value='Register' id='reg'>
+            <br><br>
+            <a href="/chat/php/login.php"  style="text-decoration:none;color:black">Already Registered? login here</a>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,13 @@
+#heading1{
+    color:green;
+    background:yellow;
+    border:7px double black;
+    padding:20px;
+}
+#img2{
+    width:50%;
+    margin-left:25%;
+    border:3px solid black;
+    padding:10px;
+    background:aquamarine;
+}
